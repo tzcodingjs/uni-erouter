@@ -5,15 +5,13 @@ const init = require('../src/init')
 const watch = require('../src/watch')
 
 // 初始化方法
-program.command('init').description('现在执行了init方法').action(() => {
-  console.log('测试1')
+program.command('init').description('init').action(() => {
   init.start()
 })
 
 // 监听文件改变
-program.command('watch').description('现在执行了watch方法').action(() => {
-  console.log('测试2')
-  watch.init()
+program.command('watch').description('watch').action(() => {
+  watch.change()
 })
 
 program.parse(process.argv)
