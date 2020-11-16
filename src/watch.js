@@ -4,12 +4,12 @@ const render = require('./render');
 class Watch {
   constructor() {
     this.timer = null
-    // 待监听文件
+    // 需要监听的文件
     this.watchFile = [
       path.join(path.resolve(), "pagesConfig"),
       path.join(path.resolve(), "pages"),
     ]
-    // 待监听文件名
+    // 需要监听的文件名
     this.watchFileName = "easycom.json,page.json,condition.json,globalStyle.json,tabBar.json";
   }
   change() {
