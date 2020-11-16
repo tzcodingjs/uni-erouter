@@ -14,4 +14,10 @@ program.command('watch').description('watch').action(() => {
   watch.change()
 })
 
+// 初始化，并监听文件改变
+program.command('start').description('start').action(() => {
+  init.start()
+  watch.change()
+})
+
 program.parse(process.argv)
