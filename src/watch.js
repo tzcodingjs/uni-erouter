@@ -7,7 +7,7 @@ class Watch {
     // 需要监听的文件
     this.watchFile = [
       path.join(path.resolve(), "pagesConfig"),
-      path.join(path.resolve(), "pages"),
+      path.join(path.resolve(), "pages")
     ]
     // 需要监听的文件名
     this.watchFileName = "easycom.json,page.json,condition.json,globalStyle.json,tabBar.json";
@@ -15,6 +15,7 @@ class Watch {
   change() {
     console.log('监听文件改动中...')
     const pagesJsonFilePath = path.join(path.resolve(), "pages.json");
+    render.start()
     this.watchFile.map(itemPath => {
       ((_path) => {
         fs.watch(
@@ -28,6 +29,7 @@ class Watch {
               if (this.timer) clearTimeout(this.timer)
               this.timer = setTimeout(() => {
                 render.start()
+                console.log('监听文件改动中...')
               }, 500)
             }
           }
