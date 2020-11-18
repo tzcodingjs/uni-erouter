@@ -1,5 +1,17 @@
 # uni-erouter
-一款优化uni-app项目pages.json的工具
+## 介绍
+一款优化uni-app项目多人协作的工具
+- 通过项目pages.json自动生成可配置文件
+- 监听文件修改并实时更新pages.json文件
+- 各个页面通过各自目录下对应的page.json自行配置，防止团队协作时pages.json文件频繁产生冲突。
+
+## 目前支持的配置项有
+1) globalStyle
+2) pages
+3) easycom
+4) tabBar
+5) condition
+---
 
 ## 安装
 ```npm

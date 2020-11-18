@@ -1,13 +1,17 @@
 {
   "name": "uni-erouter",
   "version": "0.0.1",
-  "description": "一款优化uni-app项目多人协作的工具",
+  "description": "一款优化uni-app项目多人协作工具",
   "bin": {
     "uni-erouter": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tzcodingjs/uni-erouter"
+    },
   "keywords": [
     "uni-app",
     "pages.json",

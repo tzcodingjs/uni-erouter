@@ -17,6 +17,7 @@ class Watch {
     console.log('监听文件改动中...')
     const pagesJsonFilePath = path.join(path.resolve(), "pages.json");
     const render = Render.init(this.watchFiles, this.watchFileName)
+    render.start()
     this.watchFiles.map(itemPath => {
       ((_filePath) => {
         fs.watch(
