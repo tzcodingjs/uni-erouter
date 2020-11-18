@@ -1,7 +1,7 @@
 {
   "name": "uni-erouter",
   "version": "0.0.1",
-  "description": "一款优化uni-app项目pages.json的工具",
+  "description": "一款优化uni-app项目多人协作的工具",
   "bin": {
     "uni-erouter": "./bin/index.js"
   },
@@ -11,14 +11,12 @@
   "keywords": [
     "uni-app",
     "pages.json",
-    "团队协作",
     "teamwork",
     "hbuilderX"
   ],
   "author": "tzcodingjs",
   "license": "MIT",
   "dependencies": {
-    "commander": "^6.2.0",
-    "progress": "^2.0.3"
+    "commander": "^6.2.0"
   }
 }

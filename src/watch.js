@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const render = require('./render');
+const Render = require('./render');
+
 class Watch {
   constructor() {
     this.timer = null
     // 需要监听的文件
-    this.watchFile = [
+    this.watchFiles = [
       path.join(path.resolve(), "pagesConfig"),
       path.join(path.resolve(), "pages")
     ]
@@ -15,14 +16,14 @@ class Watch {
   change() {
     console.log('监听文件改动中...')
     const pagesJsonFilePath = path.join(path.resolve(), "pages.json");
-    render.start()
-    this.watchFile.map(itemPath => {
-      ((_path) => {
+    const render = Render.init(this.watchFiles, this.watchFileName)
+    this.watchFiles.map(itemPath => {
+      ((_filePath) => {
         fs.watch(
-          _path,
+          _filePath,
           { recursive: true },
           (eventType, filename) => {
-            const filePath = path.join(_path, filename)
+            const filePath = path.join(_filePath, filename)
             const fileName = path.basename(filename)
             // 是否需要被监听
             if (this.watchFileName.indexOf(fileName) > -1) {
